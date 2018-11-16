@@ -1,0 +1,24 @@
+development: &COMMON
+ password: 
+ theme_id: 
+ store: 
+ bucket_size: 40
+ refill_rate: 2
+ timeout: 30s
+ ignore_files:
+ - config/settings_data.json
+ - snippets/locksmith-content-variables.liquid
+ - snippets/locksmith-variables.liquid
+ - snippets/locksmith.liquid
+ - snippets/bold-common.liquid
+ - layout/*.shogun.*
+ - snippets/*.shogun.*
+ - assets/*.shogun.*
+ - sections/*.shogun.*
+ - config/node_modules/*
+ - "*src/*"
+
+
+production:
+ <<: *COMMON
+ theme_id: 
