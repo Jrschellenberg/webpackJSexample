@@ -17,7 +17,7 @@ bold-common.liquid
 config.*.yml
 *.cache*
 src/dist/*
-
+src/package-lock.json
 
 assets/
 config/
