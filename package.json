@@ -1,6 +1,6 @@
 {
-  "name": "webpackJSExample",
-  "version": "1.0.0",
+  "name": "bms-webpackJSExample",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "BDD": "onchange ./**/*.js test/**/*.js -- npm test",
     "coverage": "nyc mocha --require @babel/register test/**/*",
     "noThemeWatch": "concurrently \"npm run watch\"",
-    "build": "webpack --mode=production && bmstk -c"
+    "build": "webpack --mode=production && npx bms-theme-kit -c"
   },
   "nyc": {
     "extension": [
@@ -47,7 +47,6 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
     "babel-loader": "^8.0.0-beta.0",
     "chai": "^4.2.0",
@@ -61,6 +60,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "bms-expose-module": "^0.0.6"
+    "bms-expose-module": "^0.0.6",
+    "@babel/polyfill": "^7.0.0-beta.51"
   }
 }
