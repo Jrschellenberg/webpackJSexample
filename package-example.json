@@ -1,17 +1,18 @@
 {
   "name": "bms-webpack-js-example",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "webpack -w --mode=development",
     "start": "concurrently \"cd .. && theme watch\" \"npm run watch\"",
-    "test": "mocha --require @babel/register test/**/*",
+    "test": "mocha --require @babel/register './{,!(node_modules)/**}/*.spec.js'",
     "BDD": "onchange ./**/*.js test/**/*.js -- npm test",
     "coverage": "nyc mocha --require @babel/register test/**/*",
     "noThemeWatch": "concurrently \"npm run watch\"",
+    "format": "prettier --write \"./**/*.ts\" \"./**/*.js\" \"./**/*.scss\"",
     "prepublish": "npx shx cp ./package.json ./package-example.json",
-    "build": "webpack --mode=production && npx bms-theme-kit -c"
+    "build": "webpack --mode=production && bmstk -c"
   },
   "nyc": {
     "extension": [
@@ -42,26 +43,33 @@
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/register": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.0-beta.0",
+    "bms-theme-kit": "^2.0.2",
     "chai": "^4.2.0",
     "concurrently": "^4.0.1",
+    "css-loader": "^1.0.1",
     "mocha": "^5.2.0",
     "node-sass": "^4.11.0",
-    "nodemon": "^1.18.4",
     "nyc": "^13.1.0",
     "onchange": "^5.0.2",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "bms-expose-module": "^0.0.6",
-    "@babel/polyfill": "^7.0.0-beta.51"
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/runtime-corejs2": "^7.1.5",
+    "promise-polyfill": "^8.1.0"
   }
 }
