@@ -5,6 +5,9 @@ const test = async(testVar) => {
   console.log("hello from bundle");
   const product = new Product("IamProductHandle", 1223);
   
+  // This normally needs to be polyfilled, it is getting done automatically through .babelrc
+  console.log(Array.from([1, 2, 3], x => x + x)); 
+  
   console.log(product.handle);
   console.log(product.id);
   console.log(Product.staticVariable);
