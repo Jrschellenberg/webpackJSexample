@@ -1,5 +1,3 @@
-//If you require Polyfills, Async, await, Etc uncomment below line. Be mindful, bloats the bundle!.
-import '@babel/polyfill';
 
 import Product from '../classes/Product';
 
@@ -7,14 +5,13 @@ const test = async(testVar) => {
   console.log("hello from bundle");
   const product = new Product("IamProductHandle", 1223);
   
-  
   console.log(product.handle);
   console.log(product.id);
   console.log(Product.staticVariable);
   console.log("testVar is ", testVar);
   
   sleep(3000).then(()=> {
-    console.log("sleepttt")
+    console.log("sleept 3000")
   });
   try{
     await asyncSleep(2000);
