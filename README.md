@@ -5,10 +5,9 @@
 - [x] Create a Repo for Typescript Example
 - [x] Improve yarn build script to upload only bundled assets
 - [ ] Improve README.MD Documentation for usage
-- [ ] allow yarn start command to be passed an --env for theme watch
 
 ## About
-The goal of this tool is to allow us as developers the option to use ES6 and/or typescript if we so choose. The goal of this is to just enable us to have more options available to us if we so desire. For medium/large projects, this scaffold may be a viable option as having access to modules and code reuse can hasten our development time/workflow. This current example showcases ES6 with JavaScript. There is an Example that Showcases Typescript That can be seen Here(update link)
+The goal of this tool is to allow us as developers the option to use ES6 and/or typescript if we so choose. The goal of this is to just enable us to have more options available to us if we so desire. For medium/large projects, this scaffold may be a viable option as having access to modules and code reuse can hasten our development time/workflow. This current example showcases ES6 with JavaScript. 
 
 ## Update gitIgnore
 
