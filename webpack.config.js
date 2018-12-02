@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    //BMSPolyfills: './polyfills/polyfills.js',
+    // BMSPolyfills: './polyfills/polyfills.js', // IF YOU REQUIRE POLYFILLS, uncomment and gt file location for more information
     BMSTestModule: './builds/BMSTestModule.js'
   },
   module: {
