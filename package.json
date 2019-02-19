@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack -w",
-    "start": "concurrently -k -n \"WEBPACK,BMS-WATCH\" -c \"bgBlue.bold,bgRed.bold\" \"yarn watch\" \"wait-on -l ./_assets.json && cd ../ && bms-watch -h -D\"",
+    "start": "concurrently -k -n \"WEBPACK,BMS-WATCH\" -c \"yellow.bold,blue.bold\" \"yarn watch\" \"wait-on -l ./_assets.json && cd ../ && bms-watch -h -D\"",
     "test": "mocha --require @babel/register './{,!(node_modules)/**}/*.spec.js'",
     "BDD": "onchange ./**/*.js test/**/*.js -- npm test",
     "coverage": "nyc mocha --require @babel/register test/**/*",
