@@ -125,7 +125,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: isDebug ? path.resolve(__dirname, './_ASSETS') : path.resolve(__dirname, '../assets'),
+    path: isDebug ? path.resolve(__dirname, '../assets') : path.resolve(__dirname, '../assets'),
     //publicPath: isDebug ? '/' : null
   },
 
