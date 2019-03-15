@@ -10,6 +10,8 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const isDebug = process.env.NODE_ENV !== 'production';
 const mode = `${isDebug ? "development" : "production"}`;
 
+const watchOutputDir = process.env.BETA_MODE === 'true' ? './_ASSETS' : '../assets';
+
 module.exports = {
   mode: mode,
 
@@ -125,7 +127,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: isDebug ? path.resolve(__dirname, '../assets') : path.resolve(__dirname, '../assets'),
+    path: isDebug ? path.resolve(__dirname, watchOutputDir) : path.resolve(__dirname, '../assets'),
     //publicPath: isDebug ? '/' : null
   },
 
