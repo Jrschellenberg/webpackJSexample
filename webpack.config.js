@@ -7,6 +7,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AssetsPlugin = require('assets-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const autoprefixer = require('autoprefixer');
 
 const isDebug = process.env.NODE_ENV !== 'production';
 const mode = `${isDebug ? "development" : "production"}`;
@@ -56,6 +57,9 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: isDebug,
+              plugins: () => [
+                autoprefixer
+              ],
             },
           },
           {
